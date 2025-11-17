@@ -1,0 +1,154 @@
+.dash-container {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  padding: 20px;
+  padding-bottom: 180px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+/* ---- Cabeçalho ---- */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.perfil {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* ---- Cards ---- */
+
+.status-card,
+.device-card,
+.atividade-card {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin-top: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* TEXTO padrão do status */
+.status-card h1 {
+  font-size: 26px;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ---- ESTADOS DO STATUS ---- */
+
+/* Quando NÃO tem água */
+.status-seco {
+  background: white;
+}
+
+.status-seco h1 {
+  color: #b4b4b4;
+}
+
+/* Quando TEM ÁGUA */
+.status-agua {
+  background: #0077ff;       /* azul do projeto */
+  color: white;             
+  transition: all 0.3s ease-in-out;
+}
+
+.status-agua h1 {
+  color: white;
+}
+
+/* ---- Dispositivo ---- */
+
+.device-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #6f6f6f;
+}
+
+/* ---- Atividade ---- */
+
+.atividade-card h2 {
+  margin-bottom: 20px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+/* NOVO LAYOUT BONITO PARA ATIVIDADES RECENTES */
+.horarios {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 0;
+}
+
+/* Cada item da atividade */
+.hora-item {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+
+/* Ícone/bolinha */
+.bolinha {
+  width: 14px;
+  height: 14px;
+  background: #cfcfcf;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* Bolinha azul quando tem água */
+.bolinha-agua {
+  background: #0077ff;
+  animation: pulse 1.2s infinite;
+}
+
+/* Texto de horário e descrição */
+.hora-texto {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Animação da bolinha */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Botão */
+.relatorio-btn {
+  background: #086bff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---- Ondas ---- */
+.ondas {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

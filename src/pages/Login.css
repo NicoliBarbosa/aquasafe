@@ -1,0 +1,83 @@
+/* Container geral */
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  margin-bottom: 35px;
+}
+
+/* Título */
+.title {
+  font-size: 24px;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Formulário */
+.form {
+  width: 80%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+/* Botão */
+.form button {
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(90deg, #79c9ff, #006cff);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Links */
+.links {
+  width: 80%;
+  max-width: 340px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.links a {
+  color: #9c9c9c;
+  text-decoration: none;
+}
+
+/* Ondas fixas no rodapé */
+.ondas {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  user-select: none;
+  pointer-events: none;
+}
