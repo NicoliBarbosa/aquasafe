@@ -1,0 +1,96 @@
+/* ================================
+   =======  ESTILO DESKTOP  =======
+   ================================ */
+
+@media (min-width: 768px) {
+  .create-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;     /* Centraliza HORIZONTAL */
+    align-items: center;         /* Centraliza VERTICAL */
+    background: #ffffff;
+    position: relative;
+    padding: 0;
+  }
+
+  /* CARD CENTRAL */
+  .create-card {
+    width: 430px;
+    padding: 45px 50px;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* Logo */
+  .create-card .logo {
+    width: 170px;
+    margin-bottom: 25px;
+  }
+
+  /* Título */
+  .create-card .title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #222;
+    font-weight: 700;
+  }
+
+  /* Form */
+  .create-card .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* Inputs */
+  .create-card .form input {
+    padding: 15px;
+    font-size: 15px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e3e3e3;
+    transition: 0.2s;
+  }
+
+  .create-card .form input:focus {
+    border-color: #6bb9ff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    outline: none;
+  }
+
+  /* Botão */
+  .create-card .form button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    background: linear-gradient(90deg, #79c9ff, #006cff);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .create-card .form button:hover {
+    opacity: 0.9;
+  }
+
+  /* Ondas */
+  .create-container .ondas {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

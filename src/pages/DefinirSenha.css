@@ -1,0 +1,74 @@
+/* Fonte padrão */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.definir-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  margin-top: 20px;
+}
+
+/* Título */
+.titulo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #0d0d0d;
+}
+
+/* Formulário */
+.formulario-definir {
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.formulario-definir input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #dadada;
+  background: #f9f9f9;
+  font-size: 14px;
+}
+
+/* Botão */
+.btn-definir {
+  margin-top: 10px;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6ec1ff, #007bff);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Ondas */
+.ondas {
+  width: 100%;
+  margin-top: 70px;
+}
