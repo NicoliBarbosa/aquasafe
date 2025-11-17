@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../pages/Login.css";
-import "../pages/Login-desktop.css";
+import "./Login-desktop.css";
 import logo from "/logo-vert.png";
 import ondas from "/ondas.png";
 import { useNavigate } from "react-router-dom";
