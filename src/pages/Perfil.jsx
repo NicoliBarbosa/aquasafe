@@ -12,7 +12,7 @@ export default function Perfil() {
       <div className="perfil-card">
 
         {/* Foto */}
-        <img src="/perfil.png" alt="perfil" className="perfil-foto" />
+        <img src="/user.png" alt="perfil" className="perfil-foto" />
 
         <h2 className="perfil-titulo">Meu Perfil</h2>
 

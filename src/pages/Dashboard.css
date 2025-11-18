@@ -1,3 +1,5 @@
+/* ================= MOBILE DASHBOARD ================= */
+
 .dash-container {
   width: 100%;
   min-height: 100vh;
@@ -7,6 +9,9 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   position: relative;
+
+  /* animação ao abrir */
+  animation: fadeIn 0.8s ease forwards;
 }
 
 /* ---- Cabeçalho ---- */
@@ -14,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: slideDown 0.7s ease;
 }
 
 .logo {
@@ -24,6 +30,8 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  cursor: pointer;
+  animation: bounce 0.8s ease;
 }
 
 /* ---- Cards ---- */
@@ -38,31 +46,26 @@
   margin-top: 25px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   text-align: center;
+
+  /* animação */
+  animation: cardIn 0.7s ease;
 }
 
-/* TEXTO padrão do status */
 .status-card h1 {
   font-size: 26px;
   margin: 0;
   transition: all 0.2s ease-in-out;
 }
 
-/* ---- ESTADOS DO STATUS ---- */
-
-/* Quando NÃO tem água */
-.status-seco {
-  background: white;
-}
+/* ---- ESTADOS ---- */
 
 .status-seco h1 {
   color: #b4b4b4;
 }
 
-/* Quando TEM ÁGUA */
 .status-agua {
-  background: #0077ff;       /* azul do projeto */
-  color: white;             
-  transition: all 0.3s ease-in-out;
+  background: #0077ff;
+  color: white;
 }
 
 .status-agua h1 {
@@ -83,9 +86,9 @@
   margin-bottom: 20px;
   color: #7a7a7a;
   font-weight: 600;
+  animation: fadeIn 1s ease;
 }
 
-/* NOVO LAYOUT BONITO PARA ATIVIDADES RECENTES */
 .horarios {
   display: flex;
   flex-direction: column;
@@ -93,7 +96,7 @@
   padding: 10px 0;
 }
 
-/* Cada item da atividade */
+/* item da lista */
 .hora-item {
   display: flex;
   align-items: center;
@@ -101,40 +104,31 @@
   padding: 12px 15px;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  transition: all 0.25s ease;
+
+  /* animação */
+  animation: slideLeft 0.6s ease;
 }
 
-/* Ícone/bolinha */
 .bolinha {
   width: 14px;
   height: 14px;
   background: #cfcfcf;
   border-radius: 50%;
   margin-right: 12px;
-  flex-shrink: 0;
 }
 
-/* Bolinha azul quando tem água */
 .bolinha-agua {
   background: #0077ff;
   animation: pulse 1.2s infinite;
 }
 
-/* Texto de horário e descrição */
 .hora-texto {
   font-size: 15px;
   color: #555;
   font-weight: 500;
 }
 
-/* Animação da bolinha */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* Botão */
+/* botão */
 .relatorio-btn {
   background: #086bff;
   padding: 10px 20px;
@@ -143,12 +137,61 @@
   color: white;
   cursor: pointer;
   font-weight: 600;
+
+  /* animação */
+  transition: 0.3s ease;
 }
 
-/* ---- Ondas ---- */
+.relatorio-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 14px rgba(0, 119, 255, 0.3);
+}
+
+/* ondas */
 .ondas {
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
+  animation: fadeBottom 1s ease forwards;
+  opacity: 0.7;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeBottom {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translateX(-15px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes cardIn {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
 }

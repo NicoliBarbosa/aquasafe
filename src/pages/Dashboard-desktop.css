@@ -1,0 +1,118 @@
+/* =================== DESKTOP =================== */
+@media (min-width: 768px) {
+
+  .dash-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 160px 20px;
+    animation: fadeIn 0.8s ease forwards;
+    position: relative;
+  }
+
+  .dash-header {
+    margin-bottom: 30px;
+    animation: slideDown 0.7s ease;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .perfil {
+    width: 55px;
+    height: 55px;
+    animation: bounce 0.8s ease;
+  }
+
+  /* CARDS */
+  .status-card,
+  .device-card,
+  .atividade-card {
+    padding: 35px;
+    border-radius: 22px;
+    animation: cardIn 0.7s ease;
+  }
+
+  .status-card h1 {
+    font-size: 32px;
+  }
+
+  .device-card p {
+    font-size: 18px;
+  }
+
+  .atividade-card h2 {
+    font-size: 24px;
+  }
+
+  .hora-item {
+    padding: 16px 20px;
+    animation: slideLeft 0.6s ease;
+  }
+
+  .hora-texto {
+    font-size: 17px;
+  }
+
+  .bolinha {
+    width: 16px;
+    height: 16px;
+  }
+
+  .relatorio-btn {
+    padding: 12px 26px;
+    font-size: 17px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+  }
+
+  .relatorio-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 119, 255, 0.3);
+  }
+
+  /* ondas desktop */
+  .ondas {
+    width: 100%;
+    max-height: 160px;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: fadeBottom 1s ease forwards;
+  }
+
+  /* ===== ANIMAÇÕES ===== */
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeBottom {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideDown {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-15px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes cardIn {
+    0% { opacity: 0; transform: scale(0.96); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes bounce {
+    0% { transform: scale(0.8); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+}

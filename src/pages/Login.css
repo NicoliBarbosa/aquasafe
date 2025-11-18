@@ -1,83 +1,90 @@
-/* Container geral */
-.login-container {
+/* ===== ANIMAÇÕES GERAIS ===== */
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoPop {
+  0% { opacity: 0; transform: scale(0.6); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ===== LOGIN MOBILE ===== */
+
+.login-mobile {
   width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
+  height: 100vh;
+  background: #f4faff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  position: relative;
-  overflow: hidden;
   font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  animation: fadeIn 0.7s ease-out;
 }
 
-/* Logo */
-.logo {
-  width: 150px;
-  margin-bottom: 35px;
+/* LOGO */
+.logo-anim {
+  width: 120px;
+  margin-bottom: 30px;
+  animation: logoPop 0.8s ease-out;
 }
 
-/* Título */
-.title {
-  font-size: 24px;
-  color: #1a1a1a;
+/* TÍTULO */
+.title-anim {
+  font-size: 26px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  color: #006cff;
+  animation: fadeIn 1s ease-out;
 }
 
-/* Formulário */
-.form {
-  width: 80%;
-  max-width: 350px;
+/* FORM */
+.form-mobile {
+  width: 90%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 50px;
+  gap: 16px;
 }
 
-.form input {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 15px;
-  font-family: inherit;
+.form-anim {
+  animation: slideUp 0.8s ease-out;
 }
 
-/* Botão */
-.form button {
+.form-mobile input {
   padding: 14px;
-  border-radius: 6px;
-  border: none;
-  background: linear-gradient(90deg, #79c9ff, #006cff);
-  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
   font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-mobile input:focus {
+  border-color: #006cff;
+  box-shadow: 0 0 8px #006cff4a;
+}
+
+/* BOTÃO */
+.btn-anim {
+  padding: 14px;
+  background: linear-gradient(90deg, #79c9ff, #006cff);
+  color: white;
   font-weight: 700;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.25s;
 }
 
-/* Links */
-.links {
-  width: 80%;
-  max-width: 340px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-}
-
-.links a {
-  color: #9c9c9c;
-  text-decoration: none;
-}
-
-/* Ondas fixas no rodapé */
-.ondas {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  user-select: none;
-  pointer-events: none;
+.btn-anim:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px #008cff44;
 }

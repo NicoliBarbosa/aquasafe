@@ -1,58 +1,56 @@
 import React, { useState } from "react";
-import "../pages/Login.css";
-import "./Login-desktop.css";
-import logo from "/logo-vert.png";
-import ondas from "/ondas.png";
 import { useNavigate } from "react-router-dom";
+import useDevice from "../hooks/useDevice";
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import "./Login.css";
+import "./Login-Desktop.css";
+
+import logo from "/logo-vert.png";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const isMobile = useDevice();
+
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const navigate = useNavigate();
-  const auth = getAuth();
 
   function handleLogin(e) {
     e.preventDefault();
-
-    signInWithEmailAndPassword(auth, email, senha)
-      .then(() => {
-        navigate("/dashboard");  // SUCESSO
-      })
-      .catch((error) => {
-        alert("Email ou senha incorretos!");
-      });
+    if (email === "" || senha === "") {
+      alert("Preencha email e senha!");
+      return;
+    }
+    navigate("/dashboard");
   }
 
   return (
-    <div className="login-container">
-      
-      <img src={logo} className="logo" />
+    <div className={isMobile ? "login-mobile" : "login-desktop"}>
+      <img src={logo} className="logo-anim" alt="AquaSafe" />
 
-      <h2 className="title">Acessar sua conta</h2>
+      <h1 className="title-anim">Acessar conta</h1>
 
-      <form className="form" onSubmit={handleLogin}>
-        <input 
-          type="email" 
-          placeholder="Email" 
+      <form
+        className={isMobile ? "form-mobile form-anim" : "form-desktop form-anim"}
+        onSubmit={handleLogin}
+      >
+        <input
+          type="email"
+          placeholder="E-mail"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <input 
-          type="password" 
-          placeholder="Senha" 
+        <input
+          type="password"
+          placeholder="Senha"
+          value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
 
-        <button type="submit">Login</button>
+        <button type="submit" className="btn-anim">
+          Entrar
+        </button>
       </form>
-
-      <div className="links">
-        <a href="#" onClick={() => navigate("/criar")}>Criar conta</a>
-      </div>
-
-      <img src={ondas} className="ondas" />
     </div>
   );
 }

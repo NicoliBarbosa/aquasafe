@@ -4,6 +4,7 @@ import "./CriarConta-desktop.css";
 import logo from "/logo-vert.png";
 import ondas from "/ondas.png";
 import { useNavigate } from "react-router-dom";
+import { useMobile } from "../hooks/useMobile"
 
 export default function CriarConta() {
   const [nome, setNome] = useState("");

@@ -1,0 +1,95 @@
+.relatorio-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4faff;
+  padding: 20px;
+  padding-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.relatorio-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.btn-voltar {
+  width: 32px;
+  cursor: pointer;
+  animation: pop 0.6s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.relatorio-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #006cff;
+}
+
+/* Lista */
+.lista-registros {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Item */
+.registro-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.07);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.bolinha-relatorio {
+  width: 14px;
+  height: 14px;
+  background: #cfcfcf;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.bolinha-agua {
+  background: #0077ff;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.registro-texto {
+  font-size: 15px;
+  color: #444;
+  font-weight: 500;
+}
+
+.msg-vazio {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+}
