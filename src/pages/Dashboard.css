@@ -151,11 +151,12 @@
 .ondas {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -120px;   /* empurra a onda PRA BAIXO */
   left: 0;
   animation: fadeBottom 1s ease forwards;
   opacity: 0.7;
 }
+
 
 /* ===== ANIMAÇÕES ===== */
 
