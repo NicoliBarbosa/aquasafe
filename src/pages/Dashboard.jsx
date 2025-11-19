@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
 import "./Dashboard-desktop.css";
-import { db } from "../firebase";
+import { db } from "../firebase.js";
 import { ref, onValue } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 import useDevice from "../hooks/useDevice";
