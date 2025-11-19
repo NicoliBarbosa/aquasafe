@@ -24,7 +24,7 @@ export default function Dashboard() {
 
   // Firebase listener
   useEffect(() => {
-    const statusRef = ref(db, "/leituras/status");
+    const statusRef = ref(db, "/sensorAgua/status");
 
     onValue(statusRef, (snapshot) => {
       const valor = snapshot.val();
