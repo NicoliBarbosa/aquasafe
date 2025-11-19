@@ -4,7 +4,7 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBNEgUN1Xd15NhUtS4S8d6o_pGTdg_jZvA",
+  apiKey: "AIzaSyBNEgUN1Xd15NhtUs4S8d6o_pGTdg_jZvA",
   authDomain: "aquasafe-d9068.firebaseapp.com",
   databaseURL: "https://aquasafe-d9068-default-rtdb.firebaseio.com/",
   projectId: "aquasafe-d9068",
